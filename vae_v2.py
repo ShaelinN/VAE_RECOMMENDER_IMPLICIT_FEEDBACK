@@ -152,7 +152,7 @@ class BatchHistory(keras.callbacks.Callback):
 annealing_rate = args.klannealrate if not args.klannealrate is None else 0.0001
 KLBeta = 0
 def VAE_loss(y_true, y_pred):
-
+    global KLBeta
     reconst_loss =  original_dim * losses.binary_crossentropy(y_true, y_pred)
     KLDiv = KLBeta * losses.kl_divergence(y_true, y_pred)
 
