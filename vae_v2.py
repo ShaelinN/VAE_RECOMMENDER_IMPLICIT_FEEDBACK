@@ -21,12 +21,12 @@ from tensorflow import keras
 import tensorflow.keras.backend as tfback
 from tensorflow.keras import layers, activations, Model, losses
 from tensorflow.keras.callbacks import Callback, ModelCheckpoint
-import tensorflow_ranking as tfr
+#import tensorflow_ranking as tfr
 import tensorflow_probability as tfp
 
 import numpy as np
 import os
-import pickle5 as pickle
+import pickle
 import math
 import argparse
 
@@ -37,9 +37,8 @@ import argparse
 #intermediate_dim = 512 
 #total_num_epochs = 10
 #batch_size = 200
-
-from google.colab import drive
-drive.mount('/content/drive')
+#from google.colab import drive
+#drive.mount('/content/drive')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root', type=str)
