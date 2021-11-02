@@ -22,7 +22,7 @@ import tensorflow.keras.backend as tfback
 from tensorflow.keras import layers, activations, Model, losses
 from tensorflow.keras.callbacks import Callback, ModelCheckpoint
 #import tensorflow_ranking as tfr
-import tensorflow_probability as tfp
+#import tensorflow_probability as tfp
 
 import numpy as np
 import os
@@ -101,7 +101,7 @@ print(batch_size)
 
 #distribution = tfp.distributions.LogNormal(0,1)
 #distribution = tfp.distributions.Multinomial()
-distribution = tfp.distributions.Normal(0,1)
+#distribution = tfp.distributions.Normal(0,1)
 class Sampling(layers.Layer):
   def __init__(self, name="Sampling", **kwargs):
     super(Sampling, self).__init__(name=name, **kwargs)
@@ -112,9 +112,9 @@ class Sampling(layers.Layer):
     dim = tf.shape(z_mean)[1]
 
 
-    epsilon = distribution.sample()
+    #epsilon = distribution.sample()
     
-    #epsilon = tfback.random_normal(shape=(batch,dim))
+    epsilon = tfback.random_normal(shape=(batch,dim))
     sample = epsilon * tf.exp(0.5 * z_log_var)  +   z_mean  #Reparametrization trick: convert from standard normal to desired distribution
 
     return sample
@@ -127,9 +127,9 @@ class BatchHistory(keras.callbacks.Callback):
 
   def on_train_batch_end(self, batch, logs=None):   
     #print(logs)
-    logs['recall@20'] = []
-    logs['recall@50'] = []
-    logs['ndcg'] = []
+    # logs['recall@20'] = []
+    #logs['recall@50'] = []
+    #logs['ndcg'] = []
     self.loss.append(logs.get('loss'))
 
 
