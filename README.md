@@ -7,14 +7,15 @@ a more legible version of this file is proved as HOW-TO.md
 The project assumes you will be using Google Colab for the most part to run code 
 The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 
-=======================================================================================================================================================================================================================================================================================================================================================================================
+
 
 ## 0:DESIGNATE A ROOT FOLDER FOR THE PROJECT
 make a directory to house the various workings of the project. 
-=======================================================================================================================================================================================================================================================================================================================================================================================
 
 
-##1: GETTING THE ORIGINAL DATA
+
+
+## 1: GETTING THE ORIGINAL DATA
 the yelp dataset is linked elsewhere in this submission. once it is downloaded, it is necessary to extract the relevant information out of the relevant files. Due to the size of these files and the fact that my system would not allow me to access such a large file, I had it broken into chunks by line, uploaded to google drive, and then reassembled into a single csv file.
 
 I have provided the link to this csv in the same file as the link to the original dataset, to bootstrap the process for whomever it may concern.
@@ -22,8 +23,6 @@ I have provided the link to this csv in the same file as the link to the origina
 I have also provided links to my local copy of the MovieLens reviews in the same format as my copy of the yelp data so that the project can run on either of them with minimal issues
 
 Make a directory called "Data" inside the root directory, and place th reviews.csv file (as well as the ml10m_reviews.csv file if you intend to work with MovieLens too) inside it
-=======================================================================================================================================================================================================================================================================================================================================================================================
-
 
 ## 2: PREPROCESSING
 open the notebook Preprocessing.ipynb
@@ -50,7 +49,7 @@ Run everything in both subsections within the section called "Filtration". This 
  Run all code in all subsections of  the section called "Split". It will save its result as individual split csvs and some text files
 
 Run all code in all subsections of the section called "To Matrix". This will save a series of pickle files. However, in all subsequent work the explicit matrices have not been used, and realistically you may delete them, keeping only the implicit matrices. DO NOT delete any text files or any csv files, however.
-=======================================================================================================================================================================================================================================================================================================================================================================================
+
 
 ## 3:VAE
 Open notebook VAE.ipynb. Ensure that you are using a GPU-runtime
