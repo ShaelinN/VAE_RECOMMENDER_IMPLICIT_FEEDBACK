@@ -3,21 +3,14 @@ VAE Collaborative Filtering Recommender System using implicit feedback from Yelp
 
 # HOW-TO:
 ## -1: CLARIFICATIONS
----------------------------
+======================
 The project assumes you will be using Google Colab for the most part to run code 
 The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 
-
-
 ## 0:DESIGNATE A ROOT FOLDER FOR THE PROJECT
-----------------------------------------------
 make a directory to house the various workings of the project. 
 
-
-
-
 ## 1: GETTING THE ORIGINAL DATA
---------------------------------
 the yelp dataset is linked elsewhere in this submission. once it is downloaded, it is necessary to extract the relevant information out of the relevant files. Due to the size of these files and the fact that my system would not allow me to access such a large file, I had it broken into chunks by line, uploaded to google drive, and then reassembled into a single csv file.
 
 I have provided the link to this csv in the same file as the link to the original dataset, to bootstrap the process for whomever it may concern.
