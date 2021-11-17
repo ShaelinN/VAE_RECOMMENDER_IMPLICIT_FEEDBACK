@@ -80,3 +80,22 @@ Run all code within the "TRAINING" section. This will take a long time. The "Pri
 ### Evaluation 
 Run all the cells in the Evaluation section. This will produce the recalls and ndcg at k for the VAE
 
+## 4: SVD++
+
+### Imports and Dirs
+* change the value of the variable called  root  too match the root folder of the project on your system.  
+* Change the value of "input_data"  such that it points to the same location as "specific_version_data" (not the main "Data" directory) that you defined in the "Preprocessing" notebook.
+* Give "training_results" a value which adequately describes the outputs of this file.  the default value of "svd_ml10m_training_results"  for example means that we are training svd(++) on the ML-10M dataset. 
+* Run all code in  the "imports and dirs" section
+
+### Data preparation
+Run all code in this section. this will prepare the review tuples from the csv files into an implementation-specific "trainset" needed for SVD++ to train
+
+### TRAINING
+Run all code in this section. This will take a long time
+
+### Predictions
+Run all code in this section. 
+
+### Evaluation
+Run all the code in the Evaluation section. This will produce the recalls and ndcg at k for the SVD++ model
