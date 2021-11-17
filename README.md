@@ -13,7 +13,7 @@ VAE Collaborative Filtering Recommender System using implicit feedback from Yelp
 * The project assumes you will be using Google Colab for the most part to run code 
 * The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 * it is possible to convert the models' .ipynb files to regular .py files to run on a cluster such as HIPPO at the University of KwaZulu-Natal, however you must ensure that all libraries are installed, that data folders moved to the cluster are not modified outside of code(i.e. the data folders called specific_version_data in Preprocessing, not the main folder called "Data"). Also ensure that any Colab-specific code is replaced with the relevant analogues (e.g. replacing argclass with the implementation of argparse parser), and that you call the .py file with the correct arguments. Naturally it is easier to just run in colab.
-
+* Preprocessing notebook must be run completely before running VAE notebook or SVD++ notebook
 # 2: DESIGNATE A ROOT FOLDER FOR THE PROJECT
 make a directory to house the various workings of the project. 
 
