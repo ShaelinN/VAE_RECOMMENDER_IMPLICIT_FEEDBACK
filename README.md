@@ -3,7 +3,7 @@ VAE Collaborative Filtering Recommender System using implicit feedback from Yelp
 
 # HOW-TO:
 ## -1: CLARIFICATIONS
-======================
+
 The project assumes you will be using Google Colab for the most part to run code 
 The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 
