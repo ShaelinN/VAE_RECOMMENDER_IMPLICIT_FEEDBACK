@@ -7,7 +7,7 @@ VAE Collaborative Filtering Recommender System using implicit feedback from Yelp
 The project assumes you will be using Google Colab for the most part to run code 
 The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 
-# 0:DESIGNATE A ROOT FOLDER FOR THE PROJECT
+# 0: DESIGNATE A ROOT FOLDER FOR THE PROJECT
 make a directory to house the various workings of the project. 
 
 # 1: GETTING THE ORIGINAL DATA
