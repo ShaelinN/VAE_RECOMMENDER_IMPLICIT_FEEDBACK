@@ -1,15 +1,15 @@
 # VAE_RECOMMENDER_IMPLICIT_FEEDBACK
 VAE Collaborative Filtering Recommender System using implicit feedback from Yelp dataset 
 
-#HOW-TO:
-##-1: CLARIFICATIONS
+# HOW-TO:
+## -1: CLARIFICATIONS
 a more legible version of this file is proved as HOW-TO.md
 The project assumes you will be using Google Colab for the most part to run code 
 The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 
 =======================================================================================================================================================================================================================================================================================================================================================================================
 
-##0:DESIGNATE A ROOT FOLDER FOR THE PROJECT
+## 0:DESIGNATE A ROOT FOLDER FOR THE PROJECT
 make a directory to house the various workings of the project. 
 =======================================================================================================================================================================================================================================================================================================================================================================================
 
@@ -25,7 +25,7 @@ Make a directory called "Data" inside the root directory, and place th reviews.c
 =======================================================================================================================================================================================================================================================================================================================================================================================
 
 
-##2: PREPROCESSING
+## 2: PREPROCESSING
 open the notebook Preprocessing.ipynb
 under the section "Common directories", change the value of the variable called  root  too much the root folder of the project on your system.  
 
@@ -52,7 +52,7 @@ Run everything in both subsections within the section called "Filtration". This 
 Run all code in all subsections of the section called "To Matrix". This will save a series of pickle files. However, in all subsequent work the explicit matrices have not been used, and realistically you may delete them, keeping only the implicit matrices. DO NOT delete any text files or any csv files, however.
 =======================================================================================================================================================================================================================================================================================================================================================================================
 
-##3:VAE
+## 3:VAE
 Open notebook VAE.ipynb. Ensure that you are using a GPU-runtime
 
 some Pip install commands are provided in the first cell for libraries that MAY require installation before they are ready to work in Google colab. If there is an error thrown because of a failed import, uncomment the relevant install command or add a new install command to the first cell, and run that cell.
