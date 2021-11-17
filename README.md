@@ -2,15 +2,15 @@
 VAE Collaborative Filtering Recommender System using implicit feedback from Yelp dataset 
 
 # HOW-TO:
-## -1: CLARIFICATIONS
+# -1: CLARIFICATIONS
 
 The project assumes you will be using Google Colab for the most part to run code 
 The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 
-## 0:DESIGNATE A ROOT FOLDER FOR THE PROJECT
+# 0:DESIGNATE A ROOT FOLDER FOR THE PROJECT
 make a directory to house the various workings of the project. 
 
-## 1: GETTING THE ORIGINAL DATA
+# 1: GETTING THE ORIGINAL DATA
 the yelp dataset is linked elsewhere in this submission. once it is downloaded, it is necessary to extract the relevant information out of the relevant files. Due to the size of these files and the fact that my system would not allow me to access such a large file, I had it broken into chunks by line, uploaded to google drive, and then reassembled into a single csv file.
 
 I have provided the link to this csv in the same file as the link to the original dataset, to bootstrap the process for whomever it may concern.
@@ -19,7 +19,7 @@ I have also provided links to my local copy of the MovieLens reviews in the same
 
 Make a directory called "Data" inside the root directory, and place th reviews.csv file (as well as the ml10m_reviews.csv file if you intend to work with MovieLens too) inside it
 
-## 2: PREPROCESSING
+# 2: PREPROCESSING
 open the notebook Preprocessing.ipynb
 
 ### All imports
@@ -52,7 +52,7 @@ Run all code in all subsections of  the section called "Split". It will save its
 Run all code in all subsections of the section called "To Matrix". This will save a series of pickle files. However, in all subsequent work the explicit matrices have not been used, and realistically you may delete them, keeping only the implicit matrices. DO NOT delete any text files or any csv files, however.
 
 
-## 3:VAE
+# 3: VAE
 Open notebook VAE.ipynb. Ensure that you are using a GPU-runtime
 
 some Pip install commands are provided in the first cell for libraries that MAY require installation before they are ready to work in Google colab. If there is an error thrown because of a failed import, uncomment the relevant install command or add a new install command to the first cell, and run that cell.
@@ -80,7 +80,7 @@ Run all code within the "TRAINING" section. This will take a long time. The "Pri
 ### Evaluation 
 Run all the cells in the Evaluation section. This will produce the recalls and ndcg at k for the VAE
 
-## 4: SVD++
+# 4: SVD++
 
 ### Imports and Dirs
 * change the value of the variable called  root  too match the root folder of the project on your system.  
