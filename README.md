@@ -58,8 +58,9 @@ Open notebook VAE.ipynb. Ensure that you are using a GPU-runtime
 some Pip install commands are provided in the first cell for libraries that MAY require installation before they are ready to work in Google colab. If there is an error thrown because of a failed import, uncomment the relevant install command or add a new install command to the first cell, and run that cell.
 
 ### Imports and Dirs:
-* There is a large commented-out block involving the library argparse. If you are running this code on Google colab or any kind of Jupyter notebook it is not necessary to touch this 	comment,  as the  next block of code defines a class that serves as an analogue to this code. 
-* Within the class called argclass, change the value of the variable "self.root" to match the root directory of your project. 
+There is a large commented-out block involving the library argparse. If you are running this code on Google colab or any kind of Jupyter notebook it is not necessary to touch this 	comment,  as the  next block of code defines a class that serves as an analogue to this code. 
+Within the class called argclass: 
+* change the value of the variable "self.root" to match the root directory of your project. 
 * Change the value of "self.input_data"  such that it points to the same location as "specific_version_data" (not the main "Data" directory) that you defined in the "Preprocessing" notebook.
 * Give "self.training_results" a value which adequately describes the outputs of this file.  the default value of "vae_ml10m_training_results"  for example means that we are training a vae on the ML-10M dataset. 
 * If you would like you may change the value of "self.intermediatedim", "self.epochs", "self.batchsize" and "self.klannealrate"
@@ -83,9 +84,10 @@ Run all the cells in the Evaluation section. This will produce the recalls and n
 # 4: SVD++
 
 ### Imports and Dirs
-* change the value of the variable called  root  too match the root folder of the project on your system.  
-* Change the value of "input_data"  such that it points to the same location as "specific_version_data" (not the main "Data" directory) that you defined in the "Preprocessing" notebook.
-* Give "training_results" a value which adequately describes the outputs of this file.  the default value of "svd_ml10m_training_results"  for example means that we are training svd(++) on the ML-10M dataset. 
+similar to the VAE there is a commented out block using argparse and an analogue for it called argclass. within  this class:
+* change the value of the variable called "self.root"  too match the root folder of the project on your system.  
+* Change the value of "self.input_data"  such that it points to the same location as "specific_version_data" (not the main "Data" directory) that you defined in the "Preprocessing" notebook.
+* Give "self.training_results" a value which adequately describes the outputs of this file.  the default value of "svd_ml10m_training_results"  for example means that we are training svd(++) on the ML-10M dataset. 
 * Run all code in  the "imports and dirs" section
 
 ### Data preparation
