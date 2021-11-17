@@ -3,7 +3,6 @@ VAE Collaborative Filtering Recommender System using implicit feedback from Yelp
 
 # HOW-TO:
 ## -1: CLARIFICATIONS
-a more legible version of this file is proved as HOW-TO.md
 The project assumes you will be using Google Colab for the most part to run code 
 The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 
@@ -56,14 +55,14 @@ Open notebook VAE.ipynb. Ensure that you are using a GPU-runtime
 
 some Pip install commands are provided in the first cell for libraries that MAY require installation before they are ready to work in Google colab. If there is an error thrown because of a failed import, uncomment the relevant install command or add a new install command to the first cell, and run that cell.
 
-Imports and Dirs:
-There is a large commented-out block involving the library argparse. If you are running this code on Google colab or any kind of Jupyter notebook it is not necessary to touch this 	comment,  as the  next block of code defines a class that serves as an analogue to this code. 
-Within the class called argclass, change the value of the variable "self.root" to match the root directory of your project. 
-Change the value of "self.input_data"  such that it points to the same location as "specific_version_data" (not the main "Data" directory) that you defined in the "Preprocessing" notebook.
-Give "self.training_results" a value which adequately describes the outputs of this file.  the default value of "vae_ml10m_training_results"  for example means that we are training a vae on the ML-10M dataset. 
-If you are  rerunning this code after the primary training phase crashed before completing all its epochs, then "self.weights" will be used to load any model saved before the crash
-If you would like you may change the value of "self.intermediatedim", "self.epochs", "self.batchsize" and "self.klannealrate"
-Run all code in the section "Imports and Dirs". Ensure that it has indeed initialized your training results directory, within the root folder of the project. 
+###Imports and Dirs:
+* There is a large commented-out block involving the library argparse. If you are running this code on Google colab or any kind of Jupyter notebook it is not necessary to touch this 	comment,  as the  next block of code defines a class that serves as an analogue to this code. 
+* Within the class called argclass, change the value of the variable "self.root" to match the root directory of your project. 
+* Change the value of "self.input_data"  such that it points to the same location as "specific_version_data" (not the main "Data" directory) that you defined in the "Preprocessing" notebook.
+* Give "self.training_results" a value which adequately describes the outputs of this file.  the default value of "vae_ml10m_training_results"  for example means that we are training a vae on the ML-10M dataset. 
+* If you are  rerunning this code after the primary training phase crashed before completing all its epochs, then "self.weights" will be used to load any model saved before the crash
+* If you would like you may change the value of "self.intermediatedim", "self.epochs", "self.batchsize" and "self.klannealrate"
+* Run all code in the section "Imports and Dirs". Ensure that it has indeed initialized your training results directory, within the root folder of the project. 
 
 Model Design
 Run all code within the "Model Design" section. It provides a means to build vae, as well as the loss function and a data generator
