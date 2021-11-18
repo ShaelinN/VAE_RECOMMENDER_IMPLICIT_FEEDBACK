@@ -76,14 +76,14 @@ Within the class called argclass:
 ### Model Design
 Run all code within the "Model Design" section. It provides a means to build vae, as well as the loss function and a data generator
 
-### NOTE:All sections below (still in the notebook VAE.ipynb) requires you have run the "Imports and Dirs" Section. "TRAINING" and "Evaluation" also require you have run "Model Design" section. "TRAINING", "Analysis" and "Evaluation" do not require each other’s variables, provided the all file writes (in TRAINING) went through without issues.
+### NOTE:All sections below (still in the notebook VAE.ipynb) requires you have run the "Imports and Dirs" and "Model Design" sections. "TRAINING", "Analysis" and "Evaluation" do not require each other’s variables, provided the all file writes (in TRAINING) went through without issues.
 
 ### TRAINING
 Run all code within the "TRAINING" section. This will take a long time. The "Primary Train" subsection will take up most of the time. 
 
 ### Analysis 
 * If you want to see the loss curves of the data,run  the first block of code under Analysis. Change the variable "relevant_loss_data" to match the data you want to see. The available loss files are outlined in argclass, with explanation of what it is commented next to it.
-* If you want to see some predictions, run the second block of code under analysis.Change the value of item_num and batch_num  to predict on different users. 
+* If you want to see some predictions, run the second block of code under analysis. Change the value of u_num to predict on different users. 
 
 ### Evaluation 
 Run all the cells in the Evaluation section. This will produce the recalls and ndcg at k for the VAE
