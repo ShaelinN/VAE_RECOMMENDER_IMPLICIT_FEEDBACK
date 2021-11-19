@@ -2,34 +2,85 @@
 VAE Collaborative Filtering Recommender System using implicit feedback from Yelp dataset 
 
 # HOW-TO:
-# Section C: FULL RUN
-this section explains how to go from a reviews file to fully trained models. Section A covers bootstrapping from an already trained model. Section B covers training a model by bootstrapping from an already prepared dataset.
-
-# Library versions:
+# LIBRARY VERSIONS:
 * Python: 3.7/3.9
 * Tensorflow: 2.7.0/2.6.0 
 * Numpy: 1.19.5
 * Pandas: 1.1.5
 * Surprise: 1.1.1/0.0.5
 * Pickle: 4.0
-# 1: CLARIFICATIONS
+
+# CLARIFICATIONS
 * The project assumes you will be using Google Colab for the most part to run code 
-* The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. this may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
-* it is possible to convert the models' .ipynb files to regular .py files to run on a cluster such as HIPPO at the University of KwaZulu-Natal, however you must ensure that all libraries are installed, that data folders moved to the cluster are not modified outside of code(i.e. the data folders called specific_version_data in Preprocessing, not the main folder called "Data"). Also ensure that any Colab-specific code is replaced with the relevant analogues (e.g. replacing argclass with the implementation of argparse parser), and that you call the .py file with the correct arguments. Naturally it is easier to just run in colab.
-* Preprocessing notebook must be run completely before running VAE notebook or SVD++ notebook
-# 2: DESIGNATE A ROOT FOLDER FOR THE PROJECT
+* The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. This may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
+* it is possible to convert the models' .ipynb files to regular .py files to run on a cluster such as HIPPO at the University of KwaZulu-Natal, however you must ensure that all libraries are installed, that data folders moved to the cluster are not modified outside of code(i.e. the data folders called specific_version_data in Preprocessing, not the main folder called "Data"). Also ensure that any Colab-specific code is replaced with the relevant analogues (e.g. replacing argclass with the implementation of argparse parser), and that you call the .py file with the correct arguments. Naturally **it is easier to just run in Colab if the aim is demonstration**.
+
+# DESIGNATE A ROOT FOLDER FOR THE PROJECT
 make a directory to house the various workings of the project. 
 
-# 3: GETTING THE ORIGINAL DATA
+# SECTION A: BOOTSTRAP FROM PRE-TRAINED MODEL:
+This section covers how to access my pretrained models so you don't need to do data preprocessing or model training yourself.
+Section B covers training a model by bootstrapping from an already prepared dataset. 
+Section C explains how to go from a reviews file to fully trained models.
+## A1: GETTING MODELS:
+* these links will get you the trained VAE and SVD++ models:
+>VAE/Yelp: https://drive.google.com/file/d/1lasGCIvW-g8aW4ntXhqE8_2aVFE9MgHa/view?usp=sharing 
+
+>VAE/ML-10M: https://drive.google.com/file/d/1-ke_i9z7tfRmPT2fjmJgCUM_dx9_KVm7/view?usp=sharing
+
+>SVD++/Yelp: https://drive.google.com/file/d/1-2GM6Qswc0gniuqYy9m_HuXJQ0ocWHiB/view?usp=sharing
+
+>SVD++/ML-10M: https://drive.google.com/file/d/1ooJ02J9ciKbjacof4wYbatIJLAuWeIlW/view?usp=sharing
+* place each of these models in their own directory within the project root folder
+
+## A2: GETTING DATASET:
+* these links lead to the datasets needed for the models to be evaluated:
+> Yelp: https://drive.google.com/drive/folders/1DJ57HdrrJd8yMqIrJ8MKxFmTxAefBmt2?usp=sharing
+ 
+> ML-10M: https://drive.google.com/drive/folders/1XnWpFcGKvrkCTUNFC4Z8HcTSTnM6E6HS?usp=sharing
+* unzip and place the datasets' folders somewhere within the project root folder.
+
+##A3: VARIABLES:
+for VAE use the VAE.ipynb notebook, for the SVD++ baseline, go to SVD++.ipynb
+* set the "self.root" value (under the class "argclass" in the imports and dirs section) to be the absolute path of the project root directory.
+* set the "self.training_results" value (under the class "argclass" in the imports and dirs section) to be the relative path of this directory compared to the project root directory.
+* set the "self.input_data" value (under the class "argclass" in the imports and dirs section) to be the relative path of this directory compared to the project root directory.
+
+##A4: EVALUATION/USAGE:
+* run "Imports and Dirs" sections in the notebook of the model being used. This will store the directories for the data and model. 
+* you may need to install some libraries using pip or to mount google drive.
+* if you are evaluating the SVD++ baseline, run the predictions section to generate a prediction matrix.
+* if you are evaluating the actual VAE, run the Model Design section to create the infrastructure to build the model and data generator
+* for either model type, run "Evaluation" section in the notebook
+
+#SECTION B: BOOTSTRAP FROM PREPROCESSED DATA
+This section explains training a model by bootstrapping from an already prepared/preprocessed dataset. 
+Section A covers bootstrapping from an already trained model. 
+Section C explains how to go from a reviews file to fully trained models.
+
+##B1: GETTING DATASET:
+* follow the instructions in Section A2
+
+##B2: TRAINING, EVALUATION:
+* follow the instructions in Section C3 (or C4 for SVD++). 
+  * Note that the guide mentions a value/variable "specific_version_data" from the Preprocessing stage.
+  * This refers to the folder of your preprocessed dataset if it was generated in Section C2. 
+  * If you are following Section B and downloaded the preprocessed dataset, then consider "specific_version_data" to refer to the path of this downloaded dataset relative to the project root
+  * as such, set args.input_data to point to the folder of the downloaded dataset.
+
+    
+
+# SECTION C: FULL RUN
+this section explains how to go from a reviews file to fully trained models. 
+Section A covers bootstrapping from an already trained model. 
+Section B covers training a model by bootstrapping from an already prepared dataset.
+Preprocessing notebook must be run completely before running VAE notebook or SVD++ notebook
+
+## C1: GETTING THE ORIGINAL DATA
 the yelp dataset is linked elsewhere in this submission. once it is downloaded, it is necessary to extract the relevant information out of the relevant files. Due to the size of these files and the fact that my system would not allow me to access such a large file, I had it broken into chunks by line, uploaded to google drive, and then reassembled into a single csv file.
+Make a directory called "Data" inside the root directory, and place the reviews.csv file (as well as the ml10m_reviews.csv file if you intend to work with MovieLens too) inside it
 
-I have provided the link to this csv in the same file as the link to the original dataset, to bootstrap the process for whomever it may concern.
-
-I have also provided links to my local copy of the MovieLens reviews in the same format as my copy of the yelp data so that the project can run on either of them with minimal issues
-
-Make a directory called "Data" inside the root directory, and place th reviews.csv file (as well as the ml10m_reviews.csv file if you intend to work with MovieLens too) inside it
-
-# 4: PREPROCESSING
+## C2: PREPROCESSING
 open the notebook Preprocessing.ipynb
 
 ### All imports
@@ -62,7 +113,7 @@ Run all code in all subsections of  the section called "Split". It will save its
 Run all code in all subsections of the section called "To Matrix". This will save a series of pickle files. However, in all subsequent work the explicit matrices have not been used, and realistically you may delete them, keeping only the implicit matrices. DO NOT delete any text files or any csv files, however.
 
 
-# 5: VAE
+## C3: VAE
 Open notebook VAE.ipynb. Ensure that you are using a GPU-runtime
 
 some Pip install commands are provided in the first cell for libraries that MAY require installation before they are ready to work in Google colab. If there is an error thrown because of a failed import, uncomment the relevant install command or add a new install command to the first cell, and run that cell.
@@ -91,7 +142,7 @@ Run all code within the "TRAINING" section. This will take a long time. The "Pri
 ### Evaluation 
 Run all the cells in the Evaluation section. This will produce the recalls and ndcg at k for the VAE
 
-# 6: SVD++
+## C4: SVD++
 
 ### Imports and Dirs
 similar to the VAE there is a commented out block using argparse and an analogue for it called argclass. within  this class:
