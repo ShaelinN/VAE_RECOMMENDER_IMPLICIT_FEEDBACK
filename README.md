@@ -77,7 +77,22 @@ Section B covers training a model by bootstrapping from an already prepared data
 Preprocessing notebook must be run completely before running VAE notebook or SVD++ notebook
 
 ## C1: GETTING THE ORIGINAL DATA
-the yelp dataset is linked elsewhere in this submission. once it is downloaded, it is necessary to extract the relevant information out of the relevant files. Due to the size of these files and the fact that my system would not allow me to access such a large file, I had it broken into chunks by line, uploaded to google drive, and then reassembled into a single csv file.
+* Here is the link to csv files of review tuples. 
+    > Yelp: https://drive.google.com/file/d/1cdWbyWTNc7FtP03MQr5m0KN_J2omBue9/view?usp=sharing
+
+    > MovieLens 10M: https://drive.google.com/file/d/1RwmlMUSNhsv4eitt6M7lN0N6sYp-MlIx/view?usp=sharing
+
+  * For the rest of this tutorial, it is assumed you are working with these file and not the original datasets from the relevant websites (yelp and grouplens)
+  * These files do originate in the original dataset but have undergone some cleaning and standardisation
+
+* The original datasets can be found at:
+    > Yelp: https://www.yelp.com/dataset
+
+    > MovieLens: https://grouplens.org/datasets/movielens/10m/
+
+    * These original datasets have way more information than the required fields and some cleaning occured before preprocessing to be able to move then easily between machines. 
+    * I advise the use of the review tuple CSV files linked in the point above this, as they contain only the usable data and are of standardised format
+
 Make a directory called "Data" inside the root directory, and place the reviews.csv file (as well as the ml10m_reviews.csv file if you intend to work with MovieLens too) inside it
 
 ## C2: PREPROCESSING
