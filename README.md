@@ -76,7 +76,7 @@ Within the class called argclass:
 ### Model Design
 Run all code within the "Model Design" section. It provides a means to build vae, as well as the loss function and a data generator
 
-### NOTE:All sections below (still in the notebook VAE.ipynb) requires you have run the "Imports and Dirs" and "Model Design" sections. "TRAINING", "Analysis" and "Evaluation" do not require each other’s variables, provided the all file writes (in TRAINING) went through without issues.
+### NOTE:All sections below (still in the notebook VAE.ipynb) requires you have run the "Imports and Dirs" and "Model Design" sections. "TRAINING", "Analysis" and "Evaluation" do not require each other’s variables, provided the all file writing (in TRAINING) went through without issues.
 
 ### TRAINING
 Run all code within the "TRAINING" section. This will take a long time. The "Primary Train" subsection will take up most of the time. 
@@ -97,14 +97,13 @@ similar to the VAE there is a commented out block using argparse and an analogue
 * Give "self.training_results" a value which adequately describes the outputs of this file.  the default value of "svd_ml10m_training_results"  for example means that we are training svd(++) on the ML-10M dataset. 
 * Run all code in  the "imports and dirs" section
 
-### Data preparation
-Run all code in this section. this will prepare the review tuples from the csv files into an implementation-specific "trainset" needed for SVD++ to train
+### NOTE: All further sections in this notebook (TRAINING, Predictions and Evaluation) depend on Imports and Dirs section, but do not require each other's variables, provided all file writing has occured with no errors.
 
 ### TRAINING
-Run all code in this section. This will take a long time
+Run all code in this section. This will prepare the review tuples from the csv files into an implementation-specific "trainset" needed for SVD++ to train, then train the model and save it. This will take a long time
 
 ### Predictions
-Run all code in this section. 
+Run all code in this section. this generates a matrix of prediction events for svd++ that can pe evaluated against the testing data, and saves it. You may delete the .csv temp file, but do not delete the .pkl file.
 
 ### Evaluation
 Run all the code in the Evaluation section. This will produce the recalls and ndcg at k for the SVD++ model
