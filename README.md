@@ -2,6 +2,9 @@
 VAE Collaborative Filtering Recommender System using implicit feedback from Yelp dataset 
 
 # HOW-TO:
+# Section C: FULL RUN
+this section explains how to go from a reviews file to fully trained models. Section A covers bootstrapping from an already trained model. Section B covers training a model by bootstrapping from an already prepared dataset.
+
 # Library versions:
 * Python: 3.7/3.9
 * Tensorflow: 2.7.0/2.6.0 
