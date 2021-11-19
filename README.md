@@ -142,7 +142,7 @@ Run all code within the "TRAINING" section. This will take a long time. The "Pri
 ### Evaluation 
 Run all the cells in the Evaluation section. This will produce the recalls and ndcg at k for the VAE
 
-## C4: SVD++
+## C4: SVD++/Baseline
 
 ### Imports and Dirs
 similar to the VAE there is a commented out block using argparse and an analogue for it called argclass. within  this class:
