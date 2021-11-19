@@ -40,28 +40,28 @@ Section C explains how to go from a reviews file to fully trained models.
 > ML-10M: https://drive.google.com/drive/folders/1XnWpFcGKvrkCTUNFC4Z8HcTSTnM6E6HS?usp=sharing
 * unzip and place the datasets' folders somewhere within the project root folder.
 
-##A3: VARIABLES:
+## A3: VARIABLES:
 for VAE use the VAE.ipynb notebook, for the SVD++ baseline, go to SVD++.ipynb
 * set the "self.root" value (under the class "argclass" in the imports and dirs section) to be the absolute path of the project root directory.
 * set the "self.training_results" value (under the class "argclass" in the imports and dirs section) to be the relative path of this directory compared to the project root directory.
 * set the "self.input_data" value (under the class "argclass" in the imports and dirs section) to be the relative path of this directory compared to the project root directory.
 
-##A4: EVALUATION/USAGE:
+## A4: EVALUATION/USAGE:
 * run "Imports and Dirs" sections in the notebook of the model being used. This will store the directories for the data and model. 
 * you may need to install some libraries using pip or to mount google drive.
 * if you are evaluating the SVD++ baseline, run the predictions section to generate a prediction matrix.
 * if you are evaluating the actual VAE, run the Model Design section to create the infrastructure to build the model and data generator
 * for either model type, run "Evaluation" section in the notebook
 
-#SECTION B: BOOTSTRAP FROM PREPROCESSED DATA
+# SECTION B: BOOTSTRAP FROM PREPROCESSED DATA
 This section explains training a model by bootstrapping from an already prepared/preprocessed dataset. 
 Section A covers bootstrapping from an already trained model. 
 Section C explains how to go from a reviews file to fully trained models.
 
-##B1: GETTING DATASET:
+## B1: GETTING DATASET:
 * follow the instructions in Section A2
 
-##B2: TRAINING, EVALUATION:
+## B2: TRAINING, EVALUATION:
 * follow the instructions in Section C3 (or C4 for SVD++). 
   * Note that the guide mentions a value/variable "specific_version_data" from the Preprocessing stage.
   * This refers to the folder of your preprocessed dataset if it was generated in Section C2. 
