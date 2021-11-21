@@ -26,15 +26,9 @@ This section covers how to access my pretrained models so you don't need to do d
 Section B covers training a model by bootstrapping from an already prepared dataset. 
 Section C explains how to go from a reviews file to fully trained models.
 ## A1: GETTING MODELS:
-* these links will get you the trained VAE and SVD++ models:
->VAE/Yelp: https://drive.google.com/file/d/1lasGCIvW-g8aW4ntXhqE8_2aVFE9MgHa/view?usp=sharing 
-
->VAE/ML-10M: https://drive.google.com/file/d/1-ke_i9z7tfRmPT2fjmJgCUM_dx9_KVm7/view?usp=sharing
-
->SVD++/Yelp: https://drive.google.com/file/d/1-2GM6Qswc0gniuqYy9m_HuXJQ0ocWHiB/view?usp=sharing
-
->SVD++/ML-10M: https://drive.google.com/file/d/1ooJ02J9ciKbjacof4wYbatIJLAuWeIlW/view?usp=sharing
-* place each of these models in their own directory within the project root folder
+* this link will lead you to the trained VAE and SVD++ models:
+> https://drive.google.com/drive/folders/1eAtKQO_O5BJ5WiUqhO6kpRqQESB2h36C?usp=sharing
+* place each of these directories within the project root folder
 
 ## A2: GETTING DATASET:
 * these links lead to the datasets needed for the models to be evaluated:
@@ -55,6 +49,7 @@ for VAE use the VAE.ipynb notebook, for the SVD++ baseline, go to SVD++.ipynb
 * if you are evaluating the SVD++ baseline, run the predictions section to generate a prediction matrix.
 * if you are evaluating the actual VAE, run the Model Design section to create the infrastructure to build the model and data generator
 * for either model type, run "Evaluation" section in the notebook
+* follow the instructions in Section C3 "Analysis" to see loss curves or sample predictions.
 
 # SECTION B: BOOTSTRAP FROM PREPROCESSED DATA
 This section explains training a model by bootstrapping from an already prepared/preprocessed dataset. 
