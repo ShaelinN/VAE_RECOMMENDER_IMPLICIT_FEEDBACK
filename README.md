@@ -1,5 +1,5 @@
 # VAE_RECOMMENDER_IMPLICIT_FEEDBACK
-VAE Collaborative Filtering Recommender System using implicit feedback from Yelp dataset 
+VAE Collaborative Filtering Recommender System using implicit feedback from Yelp (and MovieLens) dataset(s) 
 
 # HOW-TO:
 # LIBRARY VERSIONS:
