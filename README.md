@@ -151,8 +151,8 @@ Run all code within the "Model Design" section. It provides a means to build vae
 Run all code within the "TRAINING" section. This will take a long time. The "Primary Train" subsection will take up most of the time. 
 
 ### Analysis 
-* If you want to see the loss curves of the data,run  the first block of code under Analysis. Change the variable "relevant_loss_data" to match the data you want to see. The available loss files are outlined in argclass, with explanation of what it is commented next to it.
-* If you want to see some predictions, run the second block of code under analysis. Change the value of u_num to predict on different users. 
+* If you want to see the loss curves of the data,run  the all code in the first subsection under Analysis. 
+* If you want to see some predictions, run the code in the second section under Analysis. Change the value of u_num to predict on different users. 
 
 ### Evaluation 
 Run all the cells in the Evaluation section. This will produce the recalls and ndcg at k for the VAE
