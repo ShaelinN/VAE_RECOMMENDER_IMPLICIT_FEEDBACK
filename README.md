@@ -15,6 +15,9 @@ VAE Collaborative Filtering Recommender System using implicit feedback from Yelp
 * The project assumes you will be operating out of a Google Drive folder for the most part. make sure to mount the google drive in the runtimes used, for each notebook. This may or may not require the opening of a new window to confirm authorisation (follow whatever prompts are given).
 * it is possible to convert the models' .ipynb files to regular .py files to run on a cluster such as HIPPO at the University of KwaZulu-Natal, however you must ensure that all libraries are installed, that data folders moved to the cluster are not modified outside of code(i.e. the data folders called specific_version_data in Preprocessing, not the main folder called "Data"). Also ensure that any Colab-specific code is replaced with the relevant analogues (e.g. replacing argclass with the implementation of argparse parser), and that you call the .py file with the correct arguments. Naturally **it is easier to just run in Colab if the aim is demonstration**.
 
+
+Each section describes a different way to make use of this project, starting from the simplest way in Section A, to the most complicated in Section C.
+
 # DESIGNATE A ROOT FOLDER FOR THE PROJECT
 make a directory to house the various workings of the project. For accessing any of the content currently on my Google drive, you may create a shortcut to the file/s in your Google Drive, within this root folder. If you mount your Google Drive in Colab, it will be able to seamlessly access the shortcuts as well.
 
